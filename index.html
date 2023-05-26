@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arquitectura</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+	<style>
+		html{
+			box-sizing: border-box;
+		}
+		body, html{
+			margin: 0;
+			padding: 0;
+		}
+		header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			transition: 0.7s;
+			padding: 30px 20px;
+			z-index: 10;
+			background: #fff;
+			color: #000000;
+			font-family: 'Plus Jakarta Sans', sans-serif;
+		}
+		header.abajo{
+			background: #a664e3;
+			padding: 15px 20px;
+		}
+		header .logo{
+			position: relative;
+			color: #000000;
+			font-weight: bold;
+			font-size: 2em;
+			font-family: 'Plus Jakarta Sans', sans-serif;
+			letter-spacing: 2px;
+			transition: 1.5s;
+			text-decoration: none;
+		}
+		nav{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		header ul{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		header ul li{
+			list-style: none;
+		}
+
+		header ul li a{
+			position: relative;
+			font-family: helvetica;
+			margin: 0 15px;
+			text-decoration: none;
+			color: #000000;
+			letter-spacing: 2px;
+			font-weight: 600;
+			transition: 0.7s;
+		}
+
+		.zona1 img {
+			width: 100vw;
+		}
+
+		.zona2{
+			
+			background-color: aliceblue;
+			padding: 40px;
+		}
+		.zona3{
+			background-color: black;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+		}
+
+		.content{
+			width: 100vw;
+			height: 100vh;
+		}
+		header.abajo .logo,
+		header.abajo ul li a{
+			color: #000000;	
+		}
+
+		p{
+			font-family: 'Plus Jakarta Sans', sans-serif;
+			font-size: 20px;
+			z-index: 2;
+			text-align: justify;
+		}
+
+		.titulo{
+			font-family: 'Plus Jakarta Sans', sans-serif;
+			font-size: 35px;
+		}
+
+		.datos{
+			font-size: medium;
+			color: #fff;
+			height: 10vh;
+			
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">Arquitectura de las computadoras</a>
+		<nav>
+			<ul>
+				<li><a href=".">Inicio</a></li>
+				<li><a href="./Arquitectura/HTML/index2.html">Unidad 1</a></li>
+				<li><a href="./Arquitectura/HTML/index3.html">Unidad 2</a></li>
+				<li><a href="./Arquitectura/HTML/index4.html">Unidad 3</a></li>
+				<li><a href="./Arquitectura/HTML/index5.html">Unidad 4</a></li>
+				<li><a href="./Arquitectura/HTML/index6.html">Practicas</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="content">
+		<div class="zona1">
+			<img src="./Arquitectura/CSS/img/fondo3.jpg"/>
+		</div>
+		<div class="zona2">
+			<p class="titulo">¿Que es?</p>
+			<p>  + Arquitectura de computadoras. Es el diseño conceptual y la estructura operacional fundamental de un sistema de computadora.</p><br>
+			<p> + Es decir, es un modelo y una descripción funcional de los requerimientos y las implementaciones de diseño para varias partes de una computadora, con especial interés en la forma en que la unidad central de proceso (UCP) trabaja internamente y accede a las direcciones de memoria.</p><br>
+
+			<p> + También suele definirse como la forma de seleccionar e interconectar componentes de hardware para crear computadoras según los requerimientos de funcionalidad, rendimiento y costo</p>
+		</div>
+		<div class="zona3">
+			<p class="datos">Joyce Abrego Avila | 21051380 | Ing. Sistemas Computacionales</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.addEventListener("scroll", function(){
+			var header = document.querySelector("header");
+			header.classList.toggle("abajo",window.scrollY>0);
+		})
+	</script>
+</body>
+</html>
