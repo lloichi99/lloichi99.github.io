@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unidad 4</title>
+        <link rel="stylesheet" type="text/CSS" href="../CSS/Style.css" media="screen">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Arquitectura de las computadoras</a>
+		<nav>
+			<ul>
+				<li><a href="../HTML/index.html">Inicio</a></li>
+				<li><a href="../HTML/index2.html">Unidad 1</a></li>
+				<li><a href="../HTML/index3.html">Unidad 2</a></li>
+				<li><a href="../HTML/index4.html">Unidad 3</a></li>
+				<li><a href="../HTML/index5.html">Unidad 4</a></li>
+                <li><a href="../HTML/index6.html">Practicas</a></li>
+			</ul>
+		</nav>
+        </header>
+        <div class="box">
+              <nav class="navegador2">
+                <ul>
+                    <p>Unidad 4</p>
+                    <li><a href="#4.1">4.1 Aspectos basicos de la computacion paralela</a></li><br>
+                    <li><a href="#4.2">4.2 tipos de computacion paralela</a></li><br>
+                    <li><a href="#4.2.1">4.2.1 Clasificacion</a></li><br>
+                    <li><a href="#4.2.2">4.2.2 Arquitectura de computadores secuenciales</a></li><br>
+                    <li><a href="#4.2.3">4.2.3 Organizacion de direcciones de memoria</a></li><br>
+                    <li><a href="#4.3">4.3 Sitemas de memoria (compartida)</a></li><br>
+                    <li><a href="#4.3.1">4.3.1 Redes de interconexion dinamica (indirecta)</a></li><br>
+                    <li><a href="#4.4">4.4 Segmentacion de instrucciones</a></li><br>
+                    <li><a href="#4.4.1">4.4.1 Redes deinterconexion estatica</a></li><br>
+                    <li><a href="#4.5">4.5 Casos para estudio</a></li><br>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="zona2">
+                    <p class="tituloGrande">Unidad 4 Procesamiento paralelo</p>
+                    <p class=titulo id="4.1">4.1 Aspectos basicos de la computacion paralela</p>
+                        <p class="subtitulos">¿Que es?</p>
+                            <p>La computación paralela es una
+                                técnica de procesamiento de
+                                información que se basa en la
+                                utilización de múltiples
+                                procesadores para llevar a cabo
+                                una tarea en paralelo, en lugar de
+                                utilizar un solo procesador. Esta
+                                técnica permite mejorar
+                                significativamente la velocidad y
+                                eficiencia de los cálculos y
+                                análisis de datos en la
+                                computadora.</p>
+                        <p class="subtitulos">Sistemas de procesamiento paralelo</p>
+                            <p>Los sistemas de
+                                procesamiento paralelo se
+                                pueden clasificar en dos
+                                categorías: simétricos y
+                                asíncronos. Uno donde
+                                todos los procesadores
+                                comparten la misma
+                                memoria, y otro donde cada
+                                procesador tiene su propia
+                                memoria.</p>
+                            <p>Las herramientas de computación en
+                                paralelo son programas y bibliotecas
+                                que se utilizan para programar y
+                                ejecutar aplicaciones en sistemas
+                                paralelos, de forma que podamos sacarle
+                                el máximo provecho a estos. Un ejemplo
+                                de esto es la herramienta CUDA
+                                desarrollada por Nvidia, la cual
+                                permite que aplicaciones aprovechen el
+                                procesamiento paralelo para el
+                                procesamiento de gráficos, usando la
+                                GPU como un coprocesador usando
+                                paralelamente sus núcleos.</p>            
+                    <p class=titulo id="4.2">4.2 Tipos de computacion paralela</p>
+                    <p class=titulo id="4.2.1">4.2.1 Clasificacion</p>
+                        <p>Computación multinúcleo: Un procesador multinúcleo es un procesador que incluye múltiples
+                            unidades de ejecución (núcleos) en el mismo chip.
+                            Multiprocesamiento simétrico: Un multiprocesador simétrico (SMP) es un sistema
+                            computacional con múltiples procesadores idénticos que comparten memoria y se conectan a
+                            través de un bus.<br>
+                            Computación en clúster: Un clúster es un grupo de ordenadores débilmente acoplados que
+                            trabajan en estrecha colaboración, de modo que en algunos aspectos pueden considerarse
+                            como un solo equipo.<br>
+                            Procesamiento paralelo masivo: Tienden a ser más grandes que los clústeres, con «mucho
+                            más» de 100 procesadores.<br>
+                            Computación distribuida: La computación distribuida es la forma más distribuida de la
+                            computación paralela. Se hace uso de ordenadores que se comunican a través de la Internet
+                            para trabajar en un problema dado.<br>
+                            Circuitos integrados de aplicación específica: Debido a que un ASIC (por definición) es
+                            específico para una aplicación dada, puede ser completamente optimizado para esa aplicación.
+                            Procesadores vectoriales: Pueden ejecutar la misma instrucción en grandes conjuntos de
+                            datos.</p>
+                    <p class=titulo id="4.2.2">4.2.2 Arquitectura de computadores secuenciales</p>
+                            <p>Las computadoras secuenciales se basan en el
+                                modelo introducido por John Von Neumann, la cual
+                                consiste en:<br>
+                                ● Una Unidad Central de Procesamiento(CPU)<br>
+                                ● Memoria Principal para almacenar
+                                información<br>
+                                ● Bus donde fluyan los datos<br>
+                                ● Mecanismo de sincronización</p>
+                            <p>segmentación de instrucciones Pipeline</p>
+                            <p>Por las limitaciones que este tiene se
+                                han desarrollado algunas estrategias
+                                para aumentar el rendimiento.
+                                La más conocida es la segmentación
+                                de instrucciones Pipeline que
+                                consiste en llevar a la cola de
+                                instrucciones la siguiente instrucción
+                                que se ejecutará</p>
+                        <p class="subtitulos">Taxonomia de Flynn</p> 
+                            <p>Probablemente la clasificación más popular de computadores sea la
+                                clasificación de Flynn. Esta taxonomía de las arquitecturas está basada en la
+                                clasificación atendiendo al flujo de datos e instrucciones en un sistema. Un
+                                flujo de instrucciones es el conjunto de instrucciones secuenciales que son
+                                ejecutadas por un único procesador, y un flujo de datos es el flujo secuencial
+                                de datos requeridos por el flujo de instrucciones.</p>
+                            <p>Se basa en el número de
+                                instrucciones y de la
+                                secuencia de datos que
+                                la computadora utiliza
+                                para procesar
+                                información, Puede haber
+                                secuencias de
+                                instrucciones sencillas
+                                o múltiples y secuencias
+                                de datos sencillas o
+                                múltiples.</p>               
+                    <p class=titulo id="4.2.3">4.2.3 Organizacion de direcciones de memoria</p>
+                            <p>Organización lógica: Los programas a menudo están organizados en
+                                módulos, algunos de los cuales pueden ser compartidos por diferentes
+                                programas. La gestión de memoria es responsable de manejar esta
+                                organización lógica, que se contrapone al espacio de direcciones
+                                físicas lineales. Una forma de lograrlo es mediante la segmentación
+                                de memoria.
+                                Organización física: La memoria suele dividirse en un almacenamiento
+                                primario de alta velocidad y uno secundario de menor velocidad. La
+                                gestión de memoria del sistema operativo se ocupa de trasladar la
+                                información entre estos dos niveles de memoria.</p>
+                            <p>Las direcciones de memoria se organizan en bloques o
+                                segmentos de memoria, cada uno con una dirección base y un
+                                tamaño determinado. Las direcciones de memoria se
+                                representan como números enteros que indican la posición
+                                en la memoria donde se encuentra un dato o una
+                                instrucción.
+                                En los sistemas de memoria de acceso aleatorio (RAM), las
+                                direcciones de memoria se organizan en una matriz de
+                                celdas de memoria, donde cada celda se puede acceder
+                                directamente mediante su dirección. En los sistemas de
+                                memoria caché, la organización de direcciones de memoria
+                                se utiliza para gestionar la caché y optimizar el acceso a
+                                los datos.</p>
+                            <p>Hay dos tipos de organización de direcciones de memoria: la
+                                organización de direcciones de memoria contiguas y la
+                                organización de direcciones de memoria no contiguas.
+                                La organización de direcciones de memoria contiguas es aquella
+                                en la que las celdas de memoria se organizan de forma
+                                consecutiva en la memoria. En este tipo de organización, la
+                                dirección de memoria de una celda se puede calcular sumando la
+                                dirección de la celda anterior y el tamaño de la celda actual.
+                                Por ejemplo, si la dirección de la primera celda es 1000 y el
+                                tamaño de cada celda es de 4 bytes, la dirección de la segunda
+                                celda sería 1004, la dirección de la tercera celda sería 1008, y
+                                así sucesivamente.</p>
+                            <p>La organización de direcciones de memoria no contiguas es
+                                aquella en la que las celdas de memoria se organizan en
+                                cualquier lugar de la memoria, sin ningún patrón
+                                predecible. En este tipo de organización, la dirección de
+                                memoria se asigna a cada celda de forma independiente.
+                                La organización de direcciones de memoria contiguas es más
+                                eficiente que la organización de direcciones de memoria no
+                                contiguas, ya que permite un acceso más rápido a la
+                                memoria.<br>
+                                
+                                Además de la organización de memoria contigua y no
+                                contigua, existen otras técnicas y conceptos relacionados
+                                con la organización del espacio de direcciones de memoria
+                                que son importantes en la arquitectura de los sistemas
+                                informáticos, como por ejemplo:<br>
+                                ● Espacio de direcciones virtual: es una abstracción del
+                                espacio de direcciones de memoria física que se
+                                proporciona a los programas que se ejecutan en el
+                                sistema. Cada programa tiene su propio espacio de
+                                direcciones virtual que se traduce a una dirección
+                                física por el sistema operativo.<br>
+                                ● Memoria paginada: es una técnica que permite a los
+                                sistemas operativos administrar de manera eficiente la
+                                memoria virtual mediante la división del espacio de
+                                direcciones en páginas de tamaño fijo y la asignación
+                                de estas páginas a la memoria física según sea
+                                necesario.<br>
+                                
+                                ● Memoria caché: es un tipo de memoria de alta velocidad
+                                que se utiliza para almacenar copias de los datos que
+                                se acceden con frecuencia en la memoria principal. La
+                                memoria caché mejora el rendimiento del sistema al
+                                reducir la cantidad de veces que se accede a la
+                                memoria principal.<br>
+                                ● Arquitecturas de memoria compartida y distribuida:
+                                estas son dos formas en que se puede organizar la
+                                memoria en sistemas informáticos. En la memoria
+                                compartida, varios procesadores tienen acceso a la
+                                misma memoria física, mientras que en la memoria
+                                distribuida, cada procesador tiene su propia memoria
+                                física y la comunicación entre procesadores se realiza
+                                a través de la red.<br>
+                                
+                                ● Protección de memoria: es un mecanismo que permite a
+                                los sistemas operativos y los programas proteger el
+                                acceso no autorizado a áreas específicas de la
+                                memoria. Esto se logra mediante la asignación de
+                                permisos de acceso a cada página de memoria.</p>          
+                    <p class=titulo id="4.3">4.3 Sistemas de memoria (compartida)</p>
+                            <p>En informática, la memoria compartida es aquel tipo de memoria que
+                                puede ser accedida por múltiples programas, ya sea para
+                                comunicarse entre ellos o para evitar copias redundantes. La
+                                memoria compartida es un modo eficaz de pasar datos entre
+                                aplicaciones. Dependiendo del contexto, los programas pueden
+                                ejecutarse en un mismo procesador o en procesadores separados. La
+                                memoria usada entre dos hilos de ejecución dentro de un mismo
+                                programa se conoce también como memoria compartida.</p>
+                            <p>La memoria compartida funciona permitiendo que múltiples procesos accedan a la misma región de
+                                memoria. Esto significa que cada proceso puede leer y escribir en la misma sección de memoria,
+                                lo que les permite compartir información y comunicarse entre sí de manera eficiente.
+                                Para implementar la memoria compartida, el sistema operativo proporciona una sección de memoria
+                                que se puede asignar a varios procesos. Cuando un proceso desea acceder a la memoria compartida,
+                                debe unirse a ella y obtener un puntero a la región de memoria compartida. A partir de ahí, el
+                                proceso puede leer y escribir datos en la misma sección de memoria.
+                                Para evitar problemas de concurrencia, como la posibilidad de que dos procesos accedan a la
+                                misma región de memoria al mismo tiempo, se utilizan técnicas de sincronización para coordinar
+                                el acceso a la memoria compartida. Las técnicas de sincronización más comunes son los semáforos
+                                y los mutex. Estos son objetos que actúan como candados, permitiendo que un solo proceso acceda
+                                a la memoria compartida en un momento dado. Por ejemplo, cuando un proceso desea escribir en la
+                                memoria compartida, puede solicitar el candado y obtener acceso exclusivo a la región de
+                                memoria. Otros procesos que deseen leer o escribir deben esperar hasta que el candado se libere.
+                                
+                                Funcionalidad
+                                
+                                Para acceder a la memoria compartida, los procesos deben utilizar una API específica del sistema
+                                operativo que les permita conectarse a la memoria compartida y acceder a ella de manera segura.
+                                Por ejemplo, en sistemas operativos basados en Unix, la API de memoria compartida se encuentra
+                                en la biblioteca de funciones llamada "shmget", que permite a los procesos crear y conectarse a
+                                segmentos de memoria compartida.
+                                Una vez que los procesos se han conectado a la memoria compartida, pueden acceder a ella y
+                                compartir datos de manera eficiente. En lugar de copiar los datos entre los procesos, los datos
+                                se almacenan en la memoria compartida y se comparten entre los procesos que la utilizan.</p>
+                            <p>Funcionalidad
+
+                                En Windows, la memoria compartida se puede implementar mediante el uso de objetos de memoria
+                                compartida, que son un tipo de objeto de kernel que permite a los procesos compartir datos y
+                                recursos en la memoria del sistema.
+                                Cuando un proceso necesita acceder a una región de memoria compartida, crea un objeto de memoria
+                                compartida y solicita un identificador único para ese objeto. Otros procesos pueden acceder al
+                                mismo objeto de memoria compartida utilizando ese identificador único.
+                                Para crear un objeto de memoria compartida en Windows, se puede utilizar la función
+                                CreateFileMapping(), que reserva una región de memoria y devuelve un identificador que puede ser
+                                utilizado por varios procesos para acceder a esa región de memoria compartida. Los procesos
+                                pueden luego utilizar las funciones de memoria estándar, como memcpy() y memset(), para leer y
+                                escribir datos en esa región de memoria.</p>
+                        <p class="subtitulos">Sistema de meoria compartida</p>
+                            <p>Un sistema de memoria compartida puede ser configurado para que varias particiones lógicas
+                                compartan una agrupación de memoria física. Un entorno de memoria compartida incluye la
+                                agrupación de memoria compartida, las particiones lógicas que utilizan la memoria compartida en
+                                la agrupación de memoria compartida, la memoria lógica, la memoria autorizada de E/S, al menos
+                                una partición lógica del servidor de E/S virtual y dispositivos de espacio de paginación.</p>            
+                        <p class="subtitulos">Hardware</p>
+                                <p>En hardware, la memoria compartida se refiere a una configuración de hardware
+                                    en la que varios componentes comparten un área de memoria común en lugar de
+                                    tener su propia memoria dedicada. Esto permite a los componentes compartir
+                                    información y datos de manera más eficiente, en lugar de tener que transferir
+                                    datos a través de canales de comunicación más lentos.
+                                    Un ejemplo común de memoria compartida en hardware es la memoria de acceso
+                                    aleatorio (RAM) compartida utilizada en sistemas multiprocesador. En un sistema
+                                    multiprocesador, varios procesadores comparten la misma memoria RAM y pueden
+                                    acceder a ella simultáneamente. Esto permite que los procesadores compartan
+                                    información y datos de manera más eficiente, lo que puede mejorar el
+                                    rendimiento del sistema.</p>
+                        <p class="subtitulos">Multiprocesadores</p>
+                            <p>Los multiprocesadores son sistemas
+                                dentro de una computadora que
+                                implementan el multiprocesamiento, es
+                                decir, que utilizan más de un procesador
+                                para procesar paralelamente, lo cual
+                                mejora la velocidad de ejecución del
+                                sistema.
+                                Se distingue del multiprocesamiento
+                                porque este es un tipo de procesamiento
+                                en el cual 2 o más procesadores trabajan
+                                juntos, mientras que los
+                                multiprocesadores son sistemas de 2 o
+                                más procesadores que implementan el
+                                multiprocesamiento.<br>
+                                
+                                Multiprocesadores poco acoplados<br>
+                                En estos sistemas, cada
+                                procesador tiene su propia
+                                memoria local, canales de IO, y
+                                sistema operativo. En este caso,
+                                los procesadores intercambian
+                                datos a través de una red de alta
+                                velocidad a través de mensajes.
+                                Estos sistemas permiten sistemas
+                                de memoria distribuida, la cual
+                                es altamente escalable.
+                                Permite la programación MIMD
+                                (multiple-instruciones-on-multipl
+                                e-data)
+                                <br>
+                                Multiprocesadores altamente acoplados<br>
+                                Es un multiprocesador con una memoria
+                                compartida y altamente acoplada a los
+                                procesadores.
+                                Estos se clasifican en sistemas de
+                                acceso uniforme a memoria y en sistemas
+                                de acceso no-uniforme a memoria.
+                                Dentro de los de acceso uniforme,
+                                tenemos a los multiprocesadores
+                                heterogéneos y simétricos; los
+                                heterogéneos contiene procesadores
+                                múltiples pero no homogéneos, mientras
+                                que los simétricos abarcan procesadores
+                                homogéneos únicamente.
+                                Los procesadores homogéneos son del
+                                mismo tipo y utilizan el mismo tipo de
+                                instrucciones.<br>
+                                
+                                Multiprocesadores altamente acoplados<br>
+                                
+                                Otro tipo de estos multiprocesadores, el cual es de acceso de
+                                memoria no uniforme, es el diseño de multiprocesadores
+                                cc-NUMA, el cual se caracteriza por tener una memoria global
+                                compartida que se distribuye a todos los nodos no
+                                simétricamente, de manera que el acceso a la memoria es
+                                asimétrica, según la asignación de la memoria. Está
+                                constituido por una agrupación de sistemas de multiprocesador
+                                simétrico interconectadas por una red de conexión.</p>            
+                    <p class=titulo id="4.3.1">4.3.1 Redes de interconexion dinamica (indirecta)</p>
+                            <p>Introducción
+
+                                Las redes de interconexión dinámicas son una tecnología emergente que permite la
+                                conexión y comunicación entre diferentes sistemas informáticos en tiempo real.
+                                Estas redes permiten la integración de diferentes plataformas y servicios, lo que
+                                aumenta la eficiencia y reduce los tiempos de respuesta en los procesos empresariales.<br>
+                                Red Dinamica<br>
+                                Una red dinámica es una red cuya topología puede variar durante el cursó de la
+                                ejecución de un programa paralelo o entre dos ejecuciones de programas. La red está
+                                constituida por elementos materiales específicos, llamados Conmutadores o switches.<br>
+                                
+                                Red Indirecta<br>
+                                Las redes indirectas también pueden modelarse con un grafo donde n es un conjunto dé
+                                switches y c es el conjunto de enlaces unidireccionales o bidireccionales entre switches.
+                                Para el análisis de la mayoría de propiedades, no es necesario incluir explícitamente los
+                                nodos de procesamiento en el grafo. Aunque las redes indirectas pueden modelarse de
+                                forma similar a las directas existen algunas diferencias entre ellas.<br>
+                                
+                                ¿Qué son las redes de interconexión dinámicas?<br>
+                                Las redes de interconexión dinámicas son sistemas de comunicación que permiten la
+                                transferencia de datos en tiempo real entre diferentes dispositivos y plataformas.
+                                Estas redes se caracterizan por su capacidad para adaptarse a diferentes entornos y
+                                situaciones, lo que les permite optimizar la comunicación y el intercambio de información en
+                                diferentes contextos y sectores.
+                                Un ejemplo de red de interconexión dinámica es Internet, en la que la comunicación entre
+                                dispositivos se realiza a través de múltiples nodos intermedios. Otro ejemplo son las redes
+                                neuronales, en las que las conexiones entre neuronas se realizan a través de sinapsis y
+                                neurotransmisores.<br>
+                                
+                                Redes Dinamicas<br>
+                                Las redes de interconexión dinámicas son convenientes en los casos en que se desee una
+                                red de propósito general ya que son fácilmente reconfigurables. También por eso, este tipo de
+                                redes facilitan mucho la escalabilidad. En general, las redes dinámicas necesitan de elementos
+                                de conexión específicos como pueden ser árbitros de bus, conmutadores, etc. Las principales
+                                topologías de redes dinámicas son las siguientes:<br>
+                                
+                                Buses: podríamos definir un bus como un conjunto de líneas que permite comunicar selectiva-
+                                mente un cierto número de componentes o dispositivos de acuerdo a ciertas normas de
+                                
+                                conexión. En nuestro caso, los componentes que se conectan son procesadores, bancos de
+                                memoria, etc. EI inconveniente de un bus es que sólo permite una transferencia al mismo tiempo,
+                                por ello, en caso de que haya varias peticiones de comunicación simultáneas,
+                                debe haber un árbitro de bus que vaya ordenando y dando paso, una a una, a las diferentes
+                                peticiones. Este árbitro será un circuito digital que lleve control de los momentos en
+                                que el bus está ocupado. Para recalcar más esta forma de funcionamiento, a veces a los
+                                buses también se les denomina buses de tiempo compartido.<br> Los buses son una forma
+                                Redes multietapa o MIN (multistage interconnection network):
+                                una red de este tipo está formada por una serie de capas de módulos conmutadores p x q. Estos
+                                conmutadores pueden
+                                cambiar dinámicamente de posición para establecer las conexiones deseadas en cada momento</p>
+                            <p>Las redes de interconexión dinámicas se caracterizan por su flexibilidad y escalabilidad, lo que
+                                les permite adaptarse a diferentes entornos y necesidades empresariales.
+                                Además, estas redes cuentan con herramientas de análisis y monitoreo que permiten identificar
+                                problemas y mejorar la eficiencia en tiempo real, lo que las convierte en una herramienta
+                                esencial para la transformación digital de las empresas.
+                                Beneficios
+                                Las redes de interconexión dinámicas ofrecen numerosos beneficios para las empresas, como
+                                la mejora de la eficiencia y la reducción de costos operativos.
+                                Además, estas redes permiten la integración de diferentes sistemas y plataformas, lo que
+                                aumenta la colaboración y la innovación dentro de las organizaciones.
+                                Caracteristicas
+                                
+                                En general, las redes de interconexión dinámica indirecta y medio compartido se utilizan en
+                                redes de área local (LAN) de tamaño pequeño o mediano, donde el número de dispositivos
+                                conectados es relativamente pequeño y la cantidad de datos transmitidos no es muy grande.
+                                Sin embargo, en redes de mayor tamaño, se suelen utilizar otros tipos de arquitecturas de
+                                redes que permiten una transmisión más eficiente y una mejor gestión del tráfico de datos.</p>
+                        <p class="subtitulos">Medio Compartido</p>
+                            <p>Técnica utilizada para compartir recursos entre
+                                varios componentes de hardware, como procesadores y
+                                dispositivos de almacenamiento.
+                                Por ejemplo: Los componentes como la memoria y los
+                                dispositivos E/S comparten un bus para comunicarse
+                                entre sí, haciendo que el bus sea un medio
+                                compartido entre ambos para llevar datos a
+                                diferentes componentes<br>
+                                
+                                Pros y contras<br>
+                                
+                                Puede ofrecer ventajas en términos de
+                                simplicidad, flexibilidad y eficiencia en el uso
+                                de los recursos. Sin embargo, también puede
+                                presentar algunas limitaciones, como la necesidad
+                                de coordinar el acceso al medio compartido entre
+                                los diferentes componentes para evitar colisiones
+                                de datos y garantizar un rendimiento óptimo.<br>
+                                
+                                Medio compartido bus<br>
+                                
+                                Diferentes componentes de la computadora, como la CPU, la
+                                memoria y los dispositivos de E/S, comparten un bus de
+                                sistema común para comunicarse entre sí
+                                El bus de sistema es un conjunto de líneas que se utilizan
+                                para enviar y recibir datos, direcciones y señales de
+                                control
+                                pero también puede presentar algunas limitaciones en
+                                términos de rendimiento y escalabilidad.<br>
+                                
+                                Memoria compartida<br>
+                                
+                                Varios procesadores o núcleos de CPU comparten una misma memoria central. El uso
+                                de memoria compartida permite una mayor eficiencia en la utilización de los recursos de
+                                memoria ya que van directo a la memoria.
+                                Sin embargo, también puede presentar algunos problemas en términos de concurrencia
+                                y consistencia de datos.<br>
+                                
+                                Disco compartido<br>
+                                El uso de discos compartidos permite una mayor
+                                eficiencia en el uso de los recursos de
+                                almacenamiento y una mayor facilidad de
+                                administración, ya que los datos pueden ser
+                                compartidos entre varios nodos.
+                                Sin embargo, también puede presentar limitaciones
+                                en términos de rendimiento y escalabilidad, así
+                                como en términos de seguridad y privacidad de los
+                                datos.<br></p>
+                        <p class="subtitulos">¿Que es una red de interconexion dinamica conmutada?</p>
+                            <p>Una red de interconexión conmutada es un tipo de red que
+                                conecta dispositivos de forma que puedan comunicarse
+                                entre sí. La "conmutación" se refiere a la capacidad de
+                                la red para enrutar el tráfico entre los dispositivos
+                                conectados de manera eficiente. En otras palabras, la red
+                                decide cómo enviar la información de un dispositivo a
+                                otro de la forma más rápida y efectiva posible. Una red
+                                de interconexión conmutada puede ser gestionada de manera
+                                centralizada, lo que permite una mayor flexibilidad y
+                                adaptabilidad en la configuración de la red.<br>
+                                ¿Que es una red de interconexión
+                                dinámica conmutada?<br>
+                                
+                                La arquitectura de las redes de
+                                interconexión dinámica conmutadas se
+                                compone de diferentes capas que permiten
+                                el funcionamiento y la gestión de los
+                                dispositivos conectados.
+                                Entre las capas más importantes se
+                                encuentran la capa de transporte, la
+                                capa de control y la capa de aplicación,
+                                cada una con sus propias funciones y
+                                protocolos de comunicación.
+                                Arquitectura de las Redes de
+                                Interconexión Dinámica Conmutadas
+                                
+                                Las redes de interconexión dinámica
+                                conmutadas ofrecen numerosas ventajas
+                                frente a otras tecnologías de red, como
+                                la escalabilidad, la flexibilidad y la
+                                eficiencia energética.
+                                Además, estas redes permiten la
+                                integración de diferentes tipos de
+                                dispositivos y sistemas, lo que las hace
+                                ideales para la implementación de
+                                soluciones IoT y la automatización
+                                industrial.
+                                Ventajas de las Redes de
+                                Interconexión Dinámica Conmutadas
+                                
+                                Las redes de interconexión dinámica
+                                conmutadas tienen múltiples aplicaciones
+                                en diferentes sectores, como la
+                                industria, la salud, el transporte y la
+                                seguridad.
+                                Por ejemplo, en la industria pueden
+                                utilizarse para la monitorización y el
+                                control de procesos productivos,
+                                mientras que en la salud pueden
+                                emplearse para la telemedicina y la
+                                gestión de pacientes crónicos.</p>                    
+                    <p class=titulo id="4.4">4.4 Segmentacion de instrucciones</p>
+                        <p class="subtitulo">Multicomputadores</p>
+                                <p>Los sistemas multicomputadores
+                                    se pueden ver como un
+                                    computador paralelo en el cual
+                                    cada procesador tiene su
+                                    propia memoria local.
+                                    
+                                    En estos sistemas la memoria se encuentra distribuida y no compartida como
+                                    en los sistemas multiprocesador. Los computadores se comunican a través de
+                                    paso de mensajes, ya que éstos sólo tienen acceso directo a su memoria local
+                                    y no a las memorias del resto de procesadores.
+                                    
+                                    La transferencia de los datos se
+                                    realiza a través de la red de
+                                    interconexión que conecta un
+                                    subconjunto de procesadores con
+                                    otro subconjunto. La transferencia
+                                    de unos procesadores a otros se
+                                    realiza por tanto por múltiples
+                                    transferencias entre procesadores
+                                    conectados dependiendo del
+                                    establecimiento de dicha red.</p>
+                    <p class=titulo id="4.4.1">4.4.1 Redes deinterconexion estatica</p>
+                        <p class="subtitulos">Caracteristicas</p>
+                        <div class="imagen">
+                            <img  class="imagen3_8" src="../CSS/img/caracteristicas.png">
+                        </div>
+                        <p>Al tener una máquina paralela a diversos procesadores
+                            surge la necesidad de comunicar información entre ellos
+                            de cara a resolver un problema común o la existencia de
+                            una red de interconexión que permita realizar las
+                            operaciones descritas.
+                            El papel de la red de interconexión es tanto más
+                            importante cuanto mayor sea el número de elementos
+                            físicos que se deben unir y el flujo de información que
+                            se desee intercambiar; en el caso de los ordenadores
+                            masivamente paralelos</p>
+                        <p>Red estatica:</p>
+                        <p>Una red estática es una red cuya topología queda definida de
+                            manera definitiva y estable durante la construcción de la
+                            máquina paralela. La red simplemente une los diversos
+                            elementos de acuerdo a una configuración dada. Se utiliza
+                            sobre todo en el caso de los multicomputadores para conectar
+                            los diversos procesadores que posee la máquina
+                            +Recordando que un multicomputador es una máquina con memoria
+                            distribuida.<br>
+                            + Y los multiprocesadores son máquinas con memoria
+                            compartida o común<br>
+                            Red estatica<br>
+                            
+                            Topología en estrella: todos los dispositivos están conectados
+                            a un centro común, como un concentrador o un switch. Los
+                            dispositivos no se conectan directamente entre sí.
+                            Topología en bus: todos los dispositivos se conectan a un solo
+                            cable de comunicaciones. Los dispositivos se comunican entre
+                            sí enviando y recibiendo señales en este cable.
+                            <br>
+                            
+                            Topologías de las redes estáticas<br>
+                            
+                            Topología en anillo: los dispositivos se conectan en forma de
+                            anillo cerrado. Cada dispositivo se conecta al dispositivo
+                            adyacente, y la señal se transmite a través del anillo hasta
+                            que llega al destino.<br>
+                            Topología en malla: cada dispositivo se conecta a todos los
+                            demás dispositivos en la red. Esto proporciona redundancia y
+                            resiliencia en la red.<br></p>    
+                    <p class=titulo id="4.5">4.5 Casos para estudio</p>
+                        <p>NVIDIA: NVIDIA es una empresa que
+                            diseña y fabrica tarjetas gráficas,
+                            procesadores y sistemas de
+                            computación de alto rendimiento. La
+                            tecnología CUDA de NVIDIA permite la
+                            computación paralela en sus tarjetas
+                            gráficas, lo que las hace ideales
+                            para aplicaciones como la
+                            inteligencia artificial, la
+                            simulación y el procesamiento de
+                            imágenes.<br>
+                            
+                            Nvidia
+                            CPU Nvidia Grace
+                            SuperChip
+                            <br>
+                            Amazon Web Services: Amazon Web
+                            Services (AWS) es un servicio de
+                            computación en la nube que ofrece una
+                            amplia variedad de opciones de
+                            computación paralela, incluyendo
+                            Amazon EC2, que permite el uso de
+                            múltiples instancias para
+                            procesamiento paralelo de grandes
+                            conjuntos de datos.
+                            <br>
+                
+                            
+                            También incluye AWS High
+                            Performance Computing (HPC)
+                            <br>
+                            Google Cloud Platform: Google Cloud
+                            Platform es otro servicio de
+                            computación en la nube que utiliza la
+                            computación paralela para procesar
+                            grandes cantidades de datos. Google
+                            también ha desarrollado su propio
+                            procesador de inteligencia artificial
+                            llamado TPU (Tensor Processing Unit),
+                            que utiliza la computación paralela
+                            para acelerar el entrenamiento de
+                            redes neuronales.
+                            <br>
+                            Google Cloud Platform
+                            <br>
+                            Permite él uso de programas
+                            ultraexigentes en la nube
+                            <br>
+                            IBM: IBM ha desarrollado una variedad
+                            de productos y servicios de
+                            computación paralela, incluyendo el
+                            sistema de computación en paralelo
+                            IBM Blue Gene, que ha sido utilizado
+                            en aplicaciones científicas y de
+                            ingeniería, y el servidor de alto
+                            rendimiento IBM Power System AC922,
+                            que utiliza procesadores IBM POWER9
+                            para ofrecer computación de alto
+                            rendimiento.
+                            <br>
+                            IBM
+                            <br>
+                            IBM Blue Gene utiliza un chip de 18
+                            nucleos qué cumplen la funcion de miles
+                            de procesadores simultaneos
+                            <br>
+                            ● Investigación científica: en
+                            campos de ingeniería, física y
+                            química como él LHC en él CERN
+                            ● Análisis de datos: se usa para
+                            analizar grandes cantidades de
+                            datos ejemplo motores de búsqueda
+                            ● Simulación: simulan sistemas
+                            complejos cómo él clima, dinámica
+                            de fluidos y él comportamiento de
+                            materiales
+                            ● Procesamiento de imágenes: se usa
+                            en reconocimiento facial, y
+                            visión por computadora
+                            <br>
+                            Otros
+                            <br>
+                            IBM Blue Gene utiliza un chip de 18
+                            nucleos qué cumplen la funcion de miles
+                            de procesadores simultaneos
+                            <br>
+                            Hoy en día la gran mayoría de cpus y
+                            gpus utilizan él procesamiento en
+                            paralelo. Ya no es necesario qué él
+                            usuario obtenga una placa madre capaz
+                            de soportar dos procesadores, estos
+                            mismos hoy cuentan con núcleos y gran
+                            cantidad de hilos para realizar
+                            operaciones en paralelo
+                            Esto ayuda a mejorar él rendimiento
+                            en juegos, edición de video,
+                            simulaciones, instalaciones,
+                            conexiones etc.</p>
+                    
+                </div>
+                <div class="zona3">
+                    <p class="datos">Joyce Abrego Avila | 21051380 | Ing. Sistemas Computacionales</p>
+                    <p>i</p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("abajo",window.scrollY>0);
+            })
+        </script>
+    </body>
+</html>

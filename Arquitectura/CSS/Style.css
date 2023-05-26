@@ -1,0 +1,231 @@
+html{
+    box-sizing: border-box;
+}
+body, html{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 10;
+    background: #fff;
+    color: #000000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+header.abajo{
+    background: #a664e3;
+    padding: 15px 20px;
+}
+header .logo{
+    position: relative;
+    color: #000000;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.7s;
+}
+
+
+
+
+header.abajo .logo,
+header.abajo ul li a{
+    color: #000000;	
+}
+/**/
+
+
+.zona1  {
+    width: 90%;
+    height: 100px;
+    background-color: rgb(213, 161, 228);
+    padding: 8px;
+    text-align: center;
+}
+
+
+.imagen{
+    width: 100px;
+    height: 400px;
+    margin: 40px;
+
+}
+
+
+.zona2{
+    
+    background-color: aliceblue;
+    padding: 50px;
+}
+.zona3{
+    background-color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+
+/*Index2*/
+.imagen1{
+    height: 400px;
+    z-index: 2;    
+}
+
+.imagen2{
+    height: 300px;
+
+}
+
+
+.imagen4{
+    height: 300px;
+}
+
+
+.imagen5{
+    height: 400px;
+}
+
+
+.imagen6{
+    height: 500px;
+}
+
+
+
+
+.navegador2{
+    margin-top: 80px;
+    margin-right:0;
+    padding-top: 30px;
+    width: 20%;
+    height: auto;
+    background-color: beige;
+    float: left;
+    
+}
+
+
+.content{
+    margin-top: 80px;
+    width: 80%;
+    height: 100vh;
+    float: left;
+}
+
+p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    z-index: 2;
+    text-align: justify;
+}
+
+
+a{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    color: #000000;  
+}
+
+a:hover{
+    background-color: #a664e3;
+}
+
+.tituloGrande{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 45px;
+    text-align: center;
+}
+
+.titulo{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 35px;
+}
+
+.subtitulos{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 28px;
+}
+
+
+/*imagenes del index4 La unidad 3*/
+.imagen3_1{
+    height: 300px;
+}
+
+.imagen3_2{
+    height: 300px;
+}
+
+.imagen3_3{
+    height: 300px;
+}
+
+.imagen3_4{
+    height: 300px;
+}
+
+.imagen3_5{
+    height: 300px;
+}
+
+.imagen3_6{
+    height: 300px;
+}
+
+.imagen3_7{
+    height: 300px;
+}
+
+
+
+/*imagenes del index5 unidad 4 html*/
+.imagen3_8{
+    height: 300px;
+}
